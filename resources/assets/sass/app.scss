@@ -1,0 +1,56 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.team {
+	border: 1px solid orange;
+    height: 45vh;
+}
+
+.timer {
+	font-size: 45px;
+	color: red;
+	height: 10vh;
+}
+
+.team-name .badge {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.resource {
+    margin-bottom: 10px;
+}
+
+.resource-amount {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.resource-img {
+    width: 30px;
+}
+
+.timer-background {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background: green;
+    height: 100%;
+    top: 0;
+}
+
+h1 {
+    font-size: 3.3rem;
+}
