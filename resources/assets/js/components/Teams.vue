@@ -50,6 +50,8 @@
 				this.teams[data.team - 1].water = numbers[0];
 				this.teams[data.team - 1].food = numbers[1];
 				this.teams[data.team - 1].money = numbers[2];
+
+				this.persist(data.team, numbers[0], numbers[1], numbers[2]);
 			},
 
 			reduce(data) {
@@ -63,16 +65,33 @@
 			},
 
 			calcFood(data) {
+
 				this.teams[data.team - 1].food += parseInt(data.amount);
+
+				this.persistResource(data.team);
 			},
 
 			calcMoney(data) {
 				this.teams[data.team - 1].money += parseInt(data.amount);
+
+				this.persistResource(data.team);
 			},
 
 			calcWater(data) {
 				// console.log("calc water");
 				this.teams[data.team - 1].water += parseInt(data.amount);
+
+				this.persistResource(data.team);
+			},
+
+			persist(team, water, food, money) {
+				axios.post("/team/" + team, {water: water, food: food, money: money});
+			},
+
+			persistResource(team) {
+				let theTeam = this.teams[team - 1];
+
+				this.persist(theTeam.id, theTeam.water, theTeam.food, theTeam.money);
 			}
 		}		
 	}

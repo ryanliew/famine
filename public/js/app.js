@@ -52717,6 +52717,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.teams[data.team - 1].water = numbers[0];
 			this.teams[data.team - 1].food = numbers[1];
 			this.teams[data.team - 1].money = numbers[2];
+
+			this.persist(data.team, numbers[0], numbers[1], numbers[2]);
 		},
 		reduce: function reduce(data) {
 			// console.log("reducing");
@@ -52728,14 +52730,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			axios.post("/teams/reduce");
 		},
 		calcFood: function calcFood(data) {
+
 			this.teams[data.team - 1].food += parseInt(data.amount);
+
+			this.persistResource(data.team);
 		},
 		calcMoney: function calcMoney(data) {
 			this.teams[data.team - 1].money += parseInt(data.amount);
+
+			this.persistResource(data.team);
 		},
 		calcWater: function calcWater(data) {
 			// console.log("calc water");
 			this.teams[data.team - 1].water += parseInt(data.amount);
+
+			this.persistResource(data.team);
+		},
+		persist: function persist(team, water, food, money) {
+			axios.post("/team/" + team, { water: water, food: food, money: money });
+		},
+		persistResource: function persistResource(team) {
+			var theTeam = this.teams[team - 1];
+
+			this.persist(theTeam.id, theTeam.water, theTeam.food, theTeam.money);
 		}
 	}
 });
