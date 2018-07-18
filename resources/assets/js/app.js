@@ -15,7 +15,10 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('timer', require('./components/Timer.vue'));
+Vue.component('teams', require('./components/Teams.vue'));
+Vue.component('team', require('./components/Team.vue'));
+Vue.component('team-input', require('./components/Record.vue'));
 
 const app = new Vue({
     el: '#app'

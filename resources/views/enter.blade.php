@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Famine 30 - Game 1</title>
+        <title>Famine 30 - Team input</title>
 
         <link rel="stylesheet" href="/css/app.css">
         <!-- CSRF Token -->
@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container-fluid text-center" id="app">
-            <teams></teams>
+            <team-input></team-input>
         </div>
 
         <script src="/js/app.js"></script>

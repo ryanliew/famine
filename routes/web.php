@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get("/input", function() {
+	return view('enter');
+});
+
+Route::get("/teams", "TeamController@index");
+Route::post("/teams/reduce", "TeamController@reduce");
+Route::get("/team/{team}", "TeamController@get");
+Route::post("/team/{team}", "TeamController@update");
