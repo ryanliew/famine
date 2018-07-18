@@ -54,3 +54,19 @@
 h1 {
     font-size: 3.3rem;
 }
+
+.forward {
+    animation-name: spin-forward;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin-forward {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

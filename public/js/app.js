@@ -53482,7 +53482,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			addMoney: 0,
 			addWater: 0,
 			team: '',
-			success: false
+			success: false,
+			is_loading: false
 		};
 	},
 
@@ -53504,6 +53505,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		updateResource: function updateResource() {
 			var _this2 = this;
 
+			this.is_loading = true;
 			axios.post("/team/" + this.selectedTeam, { money: this.newMoney, food: this.newFood, water: this.newWater }).then(function (response) {
 				return _this2.onSuccess(response);
 			}).catch(function (error) {
@@ -53517,6 +53519,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.addFood = 0;
 			this.addMoney = 0;
 			this.addWater = 0;
+			this.is_loading = false;
 
 			this.selectedTeam = '';
 			this.team = '';
@@ -53551,6 +53554,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return {
 				color: color
 			};
+		},
+		buttonContent: function buttonContent() {
+			return this.is_loading ? "<i class='glyphicon glyphicon-refresh forward-spin'></i>" : "Update";
 		}
 	}
 });
@@ -53733,15 +53739,12 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-primary mt-3",
-              attrs: { type: "button" },
-              on: { click: _vm.updateResource }
-            },
-            [_vm._v("Update")]
-          )
+          _c("button", {
+            staticClass: "btn btn-primary mt-3",
+            attrs: { type: "button", disabled: _vm.is_loading },
+            domProps: { innerHTML: _vm._s(_vm.buttonContent) },
+            on: { click: _vm.updateResource }
+          })
         ])
       : _vm._e(),
     _vm._v(" "),
