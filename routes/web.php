@@ -23,3 +23,7 @@ Route::get("/teams", "TeamController@index");
 Route::post("/teams/reduce", "TeamController@reduce");
 Route::get("/team/{team}", "TeamController@get");
 Route::post("/team/{team}", "TeamController@update");
+
+Route::get("phpinfo", function() {
+	phpinfo();
+});
