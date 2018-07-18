@@ -53483,7 +53483,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			addWater: 0,
 			team: '',
 			success: false,
-			is_loading: false
+			is_loading: true
 		};
 	},
 
@@ -53556,7 +53556,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			};
 		},
 		buttonContent: function buttonContent() {
-			return this.is_loading ? "<i class='glyphicon glyphicon-refresh forward-spin'></i>" : "Update";
+			return this.is_loading ? "<i class='fas fa-spinner fa-spin'></i>" : "Update";
 		}
 	}
 });
