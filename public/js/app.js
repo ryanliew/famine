@@ -53483,7 +53483,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			addWater: 0,
 			team: '',
 			success: false,
-			is_loading: true
+			is_loading: false
 		};
 	},
 

@@ -7,7 +7,7 @@
 
         <title>Famine 30 - Game 1</title>
 
-        <link rel="stylesheet" href="/css/app.css">
+        <link rel="stylesheet" href="/css/app.css?v=1.1">
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
@@ -16,6 +16,6 @@
             <teams></teams>
         </div>
 
-        <script src="/js/app.js?v=1.0"></script>
+        <script src="/js/app.js?v=1.1"></script>
     </body>
 </html>

@@ -78,7 +78,7 @@
 				addWater: 0,
 				team: '',
 				success: false,
-				is_loading: true
+				is_loading: false
 			};
 		},
 
