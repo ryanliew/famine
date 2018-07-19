@@ -52,7 +52,7 @@
 					</div>
 					<space-timer ref="timer" :isPaused="spacePaused" :duration="duration" @open="openSpace"></space-timer>
 					<div style="display:none">
-						<space-timer ref="hungerTimer" :isPaused="hungerPaused" :duration=".5" @open="addHunger"></space-timer>
+						<space-timer ref="hungerTimer" :isPaused="hungerPaused" :duration="5" @open="addHunger"></space-timer>
 					</div>
 				</div>
 				<answer-selector :active="selecting" @input="putAnswer" @close="close"></answer-selector>

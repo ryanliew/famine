@@ -54374,7 +54374,7 @@ var render = function() {
                     [
                       _c("space-timer", {
                         ref: "hungerTimer",
-                        attrs: { isPaused: _vm.hungerPaused, duration: 0.5 },
+                        attrs: { isPaused: _vm.hungerPaused, duration: 5 },
                         on: { open: _vm.addHunger }
                       })
                     ],
@@ -54871,7 +54871,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					_this.current_group = 0;
 					_this.startTimer();
 				}
-			}, 500);
+			}, 3000);
 		},
 		startTimer: function startTimer() {
 			this.showing_instructions = false;

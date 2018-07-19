@@ -59,7 +59,7 @@
 						this.current_group = 0;
 						this.startTimer();
 					}
-				}, 500);
+				}, 3000);
 			},
 
 			startTimer() {
