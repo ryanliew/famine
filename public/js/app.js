@@ -53256,10 +53256,9 @@ var render = function() {
                         }
                       },
                       [
-                        _c("img", {
-                          staticClass: "resource-img",
-                          attrs: { src: "img/money.png" }
-                        }),
+                        _c("span", { staticClass: "dollar-sign" }, [
+                          _vm._v("$")
+                        ]),
                         _vm._v(
                           " " +
                             _vm._s(_vm.team.money) +

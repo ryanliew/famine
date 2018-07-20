@@ -54,7 +54,7 @@
             	<div class="col resource">
                		<h1 class="resource-amount">
                			<div v-if="!editMoney" @click="editMoney = !editMoney">
-                    		<img src="img/money.png" class="resource-img"> {{ team.money }}
+                    		<span class="dollar-sign">$</span> {{ team.money }}
                     	</div>
                     	<div class="input-group" v-else>
 
