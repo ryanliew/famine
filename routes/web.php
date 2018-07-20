@@ -26,6 +26,7 @@ Route::post("/team/{team}", "TeamController@update");
 
 Route::get("/game3", "GameController@page");
 Route::post("/game3", "GameController@persist");
+Route::post("/game3/edit", "GameController@edit");
 Route::post("/try", "GameController@persistTry");
 
 Route::get("phpinfo", function() {

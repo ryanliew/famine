@@ -2,7 +2,7 @@
 	<div>
 		<div class="full-height" v-if="!failed">
 			<div class="hungerSection">
-				<hungry-meter :current="current_hunger" @start="toggleStatus"></hungry-meter>
+				<hungry-meter :current="current_hunger" @start="toggleStatus" @edited="editHunger"></hungry-meter>
 			</div>
 
 			<div class="evaluation" :class="result" :style="'background-image: url(/img/' + selected_tree + '.png)'" v-if="evaluating"></div>
@@ -86,7 +86,7 @@
 			 	evaluating: false,
 			 	selected_tree: '',
 			 	result: '',
-			 	duration: .5,
+			 	duration: 20,
 			 	open: false,
 			 	spacePaused: true,
 			 	hungerPaused: true,
@@ -195,6 +195,11 @@
 				this.persistHunger();
 			},
 
+			editHunger(e) {
+				this.current_hunger = e.hunger;
+				axios.post("/game3/edit", {hunger: this.current_hunger});
+			},
+
 			persistHunger() {
 				axios.post("/game3")
 					.catch(error => this.persistHunger());
@@ -276,7 +281,7 @@
 			},
 
 			current_hunger(newVal, oldVal) {
-				this.failed = true;
+				if(newVal == 50) this.failed = true;
 			}
 		}	
 	}

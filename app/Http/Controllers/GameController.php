@@ -31,4 +31,13 @@ class GameController extends Controller
 
     	return response(200);
     }
+
+    public function edit()
+    {
+        $game = Game::find(1);
+
+        $game->update(['hungry_count' => request()->hunger]);
+
+        return response(200);
+    }
 }

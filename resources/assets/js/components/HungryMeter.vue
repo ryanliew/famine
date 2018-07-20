@@ -1,8 +1,9 @@
 <template>
 	<div>
-		<div class="d-flex hungry-meter p-2" @click="$emit('start')">
-			<h1>{{ current }} / 50</h1>
-			<div class="flex-grow-1 hungry-meter-bar">
+		<div class="d-flex hungry-meter p-2">
+			<h1 @click="editing = true" v-if="!editing">{{ current }} / 50</h1>
+			<input type="number" v-model="edit_hunger" @keyup.enter="submitHunger" v-if="editing">
+			<div class="flex-grow-1 hungry-meter-bar" @click="$emit('start')">
 				<div :style="'width:' + this.percentage + '%;'" class="timer-background"></div>
 			</div>
 		</div>
@@ -39,6 +40,8 @@
 				ongoing: '',
 				showing_instructions: false,
 				showing_timer: false,
+				edit_hunger: '',
+				editing: false
 			};
 		},
 
@@ -72,6 +75,11 @@
 			stopTimer() {
 				this.showing_timer = false;
 				this.showing = false;
+			},
+
+			submitHunger() {
+				this.$emit("edited", {hunger: this.edit_hunger});
+				this.editing = false;
 			}
 		},
 
