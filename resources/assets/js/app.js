@@ -20,6 +20,8 @@ Vue.component('teams', require('./components/Teams.vue'));
 Vue.component('team', require('./components/Team.vue'));
 Vue.component('team-input', require('./components/Record.vue'));
 
+Vue.component('finals', require("./components/Finals.vue"));
+
 const app = new Vue({
     el: '#app'
 });

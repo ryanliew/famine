@@ -59,7 +59,7 @@
 				</div>
 			</div>
 
-			<button type="button" class="btn btn-primary mt-3" @click="updateResource">Update</button>
+			<button type="button" class="btn btn-primary mt-3" @click="updateResource" v-html="buttonContent" :disabled="is_loading"></button>
 		</div>
 		
 		<div class="alert alert-success" v-if="success">Resource updated</div>
@@ -77,7 +77,8 @@
 				addMoney: 0,
 				addWater: 0,
 				team: '',
-				success: false
+				success: false,
+				is_loading: false
 			};
 		},
 
@@ -94,6 +95,7 @@
 			},
 
 			updateResource() {
+				this.is_loading = true;
 				axios.post("/team/" + this.selectedTeam, {money: this.newMoney, food: this.newFood, water: this.newWater})
 					.then(response => this.onSuccess(response))
 					.catch(error => this.updateResource());
@@ -106,6 +108,7 @@
 				this.addFood = 0;
 				this.addMoney = 0;
 				this.addWater = 0;
+				this.is_loading = false;
 
 				this.selectedTeam = '';
 				this.team = '';
@@ -150,6 +153,10 @@
 	    		return {
 	    			color: color
 	    		}
+	    	},
+
+	    	buttonContent() {
+	    		return this.is_loading ? "<i class='fas fa-spinner fa-spin'></i>" : "Update"
 	    	}
 		}	
 	}
