@@ -13,7 +13,7 @@ export default {
 			now: Math.trunc((new Date()).getTime() / 1000),
 			time: 0,
 			actualduration: 0,
-			duration: 30,
+			duration: 20,
 			isPaused: true
 		};
 	},
