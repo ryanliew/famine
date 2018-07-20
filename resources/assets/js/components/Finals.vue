@@ -86,7 +86,7 @@
 			 	evaluating: false,
 			 	selected_tree: '',
 			 	result: '',
-			 	duration: 20,
+			 	duration: 15,
 			 	open: false,
 			 	spacePaused: true,
 			 	hungerPaused: true,

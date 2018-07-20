@@ -54001,7 +54001,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			evaluating: false,
 			selected_tree: '',
 			result: '',
-			duration: 20,
+			duration: 15,
 			open: false,
 			spacePaused: true,
 			hungerPaused: true,
