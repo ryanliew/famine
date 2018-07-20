@@ -54091,7 +54091,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		openSpace: function openSpace() {
 			var _this2 = this;
 
-			this.duration = this.open ? 20 : 5;
+			this.duration = this.open ? 15 : 5;
 			this.open = !this.open;
 			Vue.nextTick(function () {
 				return _this2.$refs.timer.start();
