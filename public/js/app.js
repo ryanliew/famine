@@ -52500,13 +52500,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			};
 		},
 		timerTextStyle: function timerTextStyle() {
-			var color = "#0a620a";
-
-			if (this.percentage < 10) {
-				color = "red";
-			} else if (this.percentage <= 50) {
-				color = "#6e6907";
-			}
+			var color = "black";
 
 			return {
 				color: color
