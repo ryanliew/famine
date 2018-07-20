@@ -10,7 +10,7 @@
 
 				<div class="full-height d-flex flex-column justify-content-center align-items-center game3-selectors">
 
-					<h2>机会： {{ remaining_chance }}</h2>
+					<h1>机会： {{ remaining_chance }}</h1>
 					<div class="d-flex justify-content-center align-items-center">
 						<div class="sector text-center" @click="showSelector(1)" :class="sectorClass1">
 							<div>

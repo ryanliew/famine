@@ -10562,7 +10562,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: orange;
+  color: #905d00;
   -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
 }
@@ -10870,11 +10870,11 @@ h1 {
 }
 
 .blue-band-timer .timer-background {
-  background: blue !important;
+  background: #2f8fae !important;
 }
 
 .blue-band-timer span {
-  color: white !important;
+  color: black !important;
 }
 
 .space-indicator {
@@ -10889,11 +10889,11 @@ h1 {
 }
 
 .background-green {
-  background: #12d812 none repeat scroll 0% 0%;
+  background: #1751c2;
 }
 
 .background-red {
-  background: #f87b66 none repeat scroll 0% 0%;
+  background: #c21c00;
 }
 
 .hungerSection {

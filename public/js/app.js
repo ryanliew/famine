@@ -54364,7 +54364,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			};
 		},
 		timerTextStyle: function timerTextStyle() {
-			var color = "#6e6907";
+			var color = "black";
 
 			// if(this.percentage < 10) {
 			// 	color = "red";
@@ -54795,7 +54795,7 @@ var render = function() {
                     "full-height d-flex flex-column justify-content-center align-items-center game3-selectors"
                 },
                 [
-                  _c("h2", [_vm._v("机会： " + _vm._s(_vm.remaining_chance))]),
+                  _c("h1", [_vm._v("机会： " + _vm._s(_vm.remaining_chance))]),
                   _vm._v(" "),
                   _c(
                     "div",

@@ -101,7 +101,7 @@ h1 {
     font-size: 60px;
     margin: 0 15px;
     display: flex;
-    color: orange;
+    color: #905d00;
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
     -ms-transition: all 2s ease-in-out;
@@ -304,11 +304,11 @@ h1 {
 }
 
 .blue-band-timer .timer-background {
-    background: blue !important;
+    background: #2f8fae !important;
 }
 
 .blue-band-timer span {
-    color: white !important;
+    color: black !important;
 }
 
 .space-indicator {
@@ -323,11 +323,11 @@ h1 {
 }
 
 .background-green {
-    background: rgb(18, 216, 18) none repeat scroll 0% 0%;
+    background: #1751c2;
 }
 
 .background-red {
-    background: rgb(248, 123, 102) none repeat scroll 0% 0%;
+    background: #c21c00;
 }
 
 .hungerSection {

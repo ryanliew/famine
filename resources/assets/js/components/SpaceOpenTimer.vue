@@ -35,7 +35,7 @@ export default {
 		},
 
 		timerTextStyle() {
-			var color = "#6e6907";
+			var color = "black";
 
 			// if(this.percentage < 10) {
 			// 	color = "red";
