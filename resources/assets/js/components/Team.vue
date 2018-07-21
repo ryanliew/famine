@@ -119,12 +119,12 @@
 
 	    computed: {
 	    	foodAmountStyle() {
-	    		var color = 'green';
+	    		var color = 'black';
 
 	    		if(this.team.food < 10)
 	    			color = "red";
 	    		else if(this.team.food < 30)
-	    			color = "orange";
+	    			color = "black";
 
 	    		return {
 	    			color: color
@@ -132,12 +132,12 @@
 	    	},
 
 	    	waterAmountStyle() {
-	    		var color = 'green';
+	    		var color = 'black';
 
 	    		if(this.team.water < 10)
 	    			color = "red";
 	    		else if(this.team.water < 30)
-	    			color = "orange";
+	    			color = "black";
 	    		return {
 	    			color: color
 	    		}

@@ -53053,18 +53053,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     foodAmountStyle: function foodAmountStyle() {
-      var color = 'green';
+      var color = 'black';
 
-      if (this.team.food < 10) color = "red";else if (this.team.food < 30) color = "orange";
+      if (this.team.food < 10) color = "red";else if (this.team.food < 30) color = "black";
 
       return {
         color: color
       };
     },
     waterAmountStyle: function waterAmountStyle() {
-      var color = 'green';
+      var color = 'black';
 
-      if (this.team.water < 10) color = "red";else if (this.team.water < 30) color = "orange";
+      if (this.team.water < 10) color = "red";else if (this.team.water < 30) color = "black";
       return {
         color: color
       };
