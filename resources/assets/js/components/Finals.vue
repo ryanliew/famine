@@ -183,13 +183,13 @@
 			},
 
 			openSpace() {
-				this.duration = this.open ? 15 : 5;
+				this.duration = this.open ? 15 : 3;
 				this.open = !this.open;
 				Vue.nextTick( () => this.$refs.timer.start() );
 			},
 
 			addHunger() {
-				this.current_hunger += 2;
+				this.current_hunger = parseInt(this.current_hunger) + 2;
 				Vue.nextTick( () => this.$refs.hungerTimer.start());
 
 				this.persistHunger();
