@@ -14077,9 +14077,9 @@ window.Popper = __webpack_require__(4).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(5);
+    window.$ = window.jQuery = __webpack_require__(5);
 
-  __webpack_require__(18);
+    __webpack_require__(18);
 } catch (e) {}
 
 /**
@@ -14101,9 +14101,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+    window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 } else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+    console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
 /**
@@ -14117,10 +14117,10 @@ if (token) {
 window.Pusher = __webpack_require__(39);
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
-  broadcaster: 'pusher',
-  key: "52b0ee910d39a67787d0",
-  cluster: "ap1",
-  encrypted: true
+    broadcaster: 'pusher',
+    key: "52b0ee910d39a67787d0",
+    cluster: "ap1",
+    encrypted: true
 });
 
 /***/ }),
@@ -52525,7 +52525,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			now: Math.trunc(new Date().getTime() / 1000),
 			time: 0,
 			actualduration: 0,
-			duration: 30,
+			duration: 20,
 			isPaused: true
 		};
 	},
@@ -54047,6 +54047,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					_this.answer3 = false;
 					_this.answer4 = false;
 					_this.answer5 = false;
+					_this.timing = true;
 					_this.remaining_chance -= 1;
 					_this.persistTry();
 				}, 180000);
@@ -54057,7 +54058,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 				this.evaluating = true;
 				this.result = 'fail';
-				if (this.answer1 == 'water_tree' && this.answer2 == 'west' && this.answer3 == 'black' && this.is_nutrient(this.answer4) && this.answer5 == 'fall') {
+				if (this.answer1 == 'water_tree' && this.answer2 == 'black' && this.is_nutrient(this.answer3) && this.answer4 == 'fall' && this.answer5 == 'west') {
 					this.result = 'success';
 				}
 
@@ -54091,7 +54092,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var _this3 = this;
 
 			this.current_hunger += 2;
-			this.duration = .5;
 			Vue.nextTick(function () {
 				return _this3.$refs.hungerTimer.start();
 			});

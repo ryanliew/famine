@@ -142,6 +142,7 @@
 						this.answer3 = false;
 						this.answer4 = false;
 						this.answer5 = false;
+						this.timing = true;
 						this.remaining_chance -= 1;
 						this.persistTry();
 					}, 180000);
@@ -154,10 +155,10 @@
 					this.evaluating = true;
 					this.result = 'fail';
 					if(this.answer1 == 'water_tree' 
-						&& this.answer2 == 'west' 
-						&& this.answer3 == 'black' 
-						&& this.is_nutrient(this.answer4) 
-						&& this.answer5 == 'fall')
+						&& this.answer2 == 'black' 
+						&& this.is_nutrient(this.answer3)
+						&& this.answer4 == 'fall' 
+						&& this.answer5 == 'west')
 					{
 						this.result = 'success';
 					}
@@ -189,7 +190,6 @@
 
 			addHunger() {
 				this.current_hunger += 2;
-				this.duration = .5;
 				Vue.nextTick( () => this.$refs.hungerTimer.start());
 
 				this.persistHunger();
