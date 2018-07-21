@@ -52525,7 +52525,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			now: Math.trunc(new Date().getTime() / 1000),
 			time: 0,
 			actualduration: 0,
-			duration: 20,
+			duration: 30,
 			isPaused: true
 		};
 	},
